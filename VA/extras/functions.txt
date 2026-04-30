@@ -1,0 +1,20 @@
+Time & Date
+Weather
+Jokes
+System Info
+ - battery, ram, etc.
+web-search
+
+-------------------------------------
+| Purpose              | Library                          |
+| -------------------- | -------------------------------- |
+| Voice Input          | `speech_recognition` / `whisper` |
+| Voice Output         | `pyttsx3`, `gTTS`                |
+| Weather              | `requests` + `openweathermap`    |
+| Wikipedia Search     | `wikipedia`                      |
+| Jokes                | `pyjokes`                        |
+| App/File Control     | `os`, `subprocess`               |
+| Time/Date            | `datetime`                       |
+| Battery/Performance  | `psutil`                         |
+| Web Search / YouTube | `pywhatkit`                      |
+

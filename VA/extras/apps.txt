@@ -1,0 +1,9 @@
+notepad
+mspaint
+calc
+winword
+excel
+chrome
+msedge
+vlc
+spotify
