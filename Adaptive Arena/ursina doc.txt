@@ -1,0 +1,61 @@
+Showing a Picture/Image
+
+my_image = Entity(
+    model='quad',           	  # 'quad' = flat rectangle (for 2D)
+    texture='path/to/image.png',  # Your image file
+    scale=(4, 3),          	  # Width, Height (in Ursina units)
+    position=(0, 0, 0),    	  # X, Y, Z coordinates
+    enabled=True           	  # True = visible, False = hidden
+)
+
+Creating Buttons
+
+# Image button (with texture)
+image_button = Button(
+    texture='button.png',      # Use an image instead of text
+    color=color.white,         # Keep white to show original colors
+    scale=(0.3, 0.1),
+    position=(0, -0.2),
+    on_click=my_function
+)
+
+# Text button
+text_button = Button(
+    text='Click Me',           # Text on button
+    color=color.azure,         # Button color
+    scale=(0.2, 0.08),         # Width, Height
+    position=(0, 0),           # X, Y position
+    on_click=my_function       # Function to call when clicked (NO parentheses!)
+    on_click=Func(button_clicked, 'attack')  # Pass parameters
+)
+
+Moving a sprite
+P = Entity()
+
+# Go To
+P.x = 5 / P.y = 5 / P.position(x,y,z)
+
+# Glide
+P.animate_x(5, duration=1) / P.animate_y(5,duration=1) / P.animate_position((x,y,z), duration=1) # seconds
+
+Animation
+
+def func():
+    global idx
+    P.texture = frames[idx]
+    idx = (idx + 1) % len(frames)
+    invoke(func, delay=0.1)
+
+func()
+
+Destroy/Remove Elements
+destroy(P)
+
+s = Audio('name', autoplay=False)
+s.play()
+s.pause()
+s.stop()
+s.fade_out(duration=2)
+s.volume=0.5
+s.loop=True
+sound.length : get total sound length
